@@ -83,6 +83,24 @@ class Phonebook {
         object['phone'] = phone;
         this.contacts.push(object);
     }
+    // findContactByName(searchName) {
+    //     let result = '';
+    //     // return function() {
+    //     // return this.contacts.find(x => x.name === searchName);
+    //     // this.contacts.filter(x => x.name === searchName).map(x => x.phone);
+    //     this.contacts.forEach( function (element) {
+    //         // console.log(element, element.name, element.phone);
+    //         if (element.name === searchName) {
+    //             // console.log(`{ name: "${key}", phone: "${value}" }`);
+    //             // console.log(element);
+    //             // return element;
+    //             result = `{ name: ${element.name}, phone: ${element.phone} }`;
+    //             // console.log(result);
+    //             // return result;
+    //         }
+    //     });
+    //     return result;
+    // }
     findContactByName(searchName) {
         // return this.contacts.find(x => x.name === searchName);
         return this.contacts.filter(x => x.name === searchName);
@@ -90,6 +108,11 @@ class Phonebook {
     }
     findContactByPhone(searchPhone) {
         return this.contacts.filter(x => x.phone === searchPhone);
+        // this.contacts.forEach( (element) => {
+        //     if (element.phone === searchPhone) {
+        //         return `{ name: ${element.name}, phone: ${element.phone} }`;
+        //     }
+        // })
     }
     deleteContact(searchName) {
         this.contacts.forEach( (element, index, array) => {
