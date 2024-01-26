@@ -76,7 +76,7 @@ function setInterval(func, interval, ...param) {
         console.log(setInterval(func, interval, ...param));
         // let timerId = setInterval(func, interval, ...param);
         // console.log(timerId);
-        return count++;
+        // return count++;
     }, interval);
 };
 
