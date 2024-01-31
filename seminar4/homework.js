@@ -70,11 +70,11 @@ function setInterval(func, interval, ...param) {
 // const setInterval = (func, interval, ...param) => {
     setTimeout(() => {
         const data = func(...param);
-        // count++;
-        // if (count >= 10) { clearInterval(count); }
+        count++;
+        if (count >= 10) { clearInterval(timerId); }
         // console.log(setInterval);
-        console.log(setInterval(func, interval, ...param));
-        // let timerId = setInterval(func, interval, ...param);
+        // console.log(setInterval(func, interval, ...param));
+        let timerId = setInterval(func, interval, ...param);
         // console.log(timerId);
         // return count++;
     }, interval);
@@ -83,7 +83,7 @@ function setInterval(func, interval, ...param) {
 try {
     let timerId = setInterval(getDog, 3000, URL);
 
-    console.log(timerId);
+    // console.log(timerId);
     // clearInterval(setInterval(getData, 3000, URL));
 
     // setTimeout(function () {
